@@ -10,7 +10,7 @@
 
 img.logo:hover {
     border-style: dotted;
-    color: blue;
+    color: #1720ce;
     padding: 10px;
 }
 
@@ -34,9 +34,9 @@ header {
 
 .menu-elementos a:hover {
     border-style: dotted;
-    border-color: blue;
+    border-color: #1720ce;
     padding: 10px;
-    color: blue;
+    color: #1720ce;
 }
 
 .menu-elementos a {
@@ -44,17 +44,12 @@ header {
     color: black;
 }
 
-.menu-responsive {
-    display: flex;
-    justify-content: flex-end;
-}
-
 /* Estilos banner principal */
 .texto-banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 100px!important;
+    padding-left: 100px;
 }
 
 .texto-banner h1 {
@@ -66,16 +61,16 @@ header {
 .banner-boton {
     text-decoration: none;
     border-style: dotted;
-    border-color: blue;
+    border-color: #1720ce;
     padding: 10px;
-    color: blue;
+    color: #1720ce;
     font-size: 14px;
     text-align: center;
     width: 10rem;
 }
 
 a.banner-boton:hover {
-    background-color: blue;
+    background-color: #1720ce;
     color: #FFF;
     border-style: dotted;
     border-color: #FFF;
@@ -102,7 +97,7 @@ section h6 {
 }
 
 .titulo hr {
-    border: dotted blue;
+    border: dotted #1720ce;
     opacity: inherit;
     background-color: white;
 }
@@ -129,16 +124,16 @@ section h6 {
 /* Estilos footer */
 
 footer {
-    bottom:0!important;
+    bottom:0;
     width: 100%;
-    height: auto!important;
-    background-color: blue;
+    height: auto;
+    background-color: #1720ce;
     display: flex;
     justify-content: space-around;
 }
 .datos {
     bottom:0;
-    background-color: blue;
+    background-color: #1720ce;
     font-size: 24px;
     padding: 30px 0;
     line-height: normal;
@@ -152,6 +147,10 @@ footer div a {
     color: #FFF;
     text-decoration: none;
     align-items: center;
+}
+
+footer div a:hover {
+    color: white;
 }
 
 .sociales {
@@ -180,7 +179,7 @@ footer div a {
 }
 
 h1 {
-    color: blue;
+    color: #1720ce;
     font-size: 40px;
 }
 
@@ -195,6 +194,10 @@ h1 {
     display: flex;
     align-items: center;
     margin: 50px 0px;
+}
+
+.titulo-seccion {
+    padding: 0px;
 }
 
 .libros {
@@ -220,7 +223,7 @@ h1 {
 
 .prev-link {
     font-size: 14px;
-    color: blue;
+    color: #1720ce;
     margin: 0;
 }
 
@@ -265,7 +268,7 @@ h1 {
 
 input {
     height: 30px;
-    border-color: blue;
+    border-color: #1720ce;
     border-radius: 5px;
     font-family: "Roboto";
     font-size: 14px;
@@ -273,7 +276,7 @@ input {
 }
 
 textarea {
-    border-color: blue;
+    border-color: #1720ce;
     border-radius: 5px;
     font-family: "Roboto";
     font-size: 14px;
@@ -298,14 +301,14 @@ textarea {
 .btn-enviar {
     width: 20%;
     height: 40px;
-    border: blue;
+    border: #1720ce;
     border-style: dotted;
     background-color: white;
     color: black;
 }
 
 .btn-enviar:hover {
-    background-color: blue;
+    background-color: #1720ce;
     border-style: dotted;
     border-color: white;
     color: white;
@@ -318,9 +321,20 @@ textarea {
         flex-direction: column;
     }
 
+    .titulo hr {
+        width: 100%;
+        align-items: center;
+    }
+
 }
 
 @media (max-width: 768px) {
+    .menu-elementos a:active {
+        border-style: none;
+        padding: 0px;
+        color: #1720ce;
+    }
+
     .texto-banner {
         padding-left: 20px!important;
     }
@@ -330,9 +344,8 @@ textarea {
     }
 
     .titulo hr {
-        margin: 0 15px;
+        width: 100%;
         align-items: center;
-        width: 90%;
     }
 
     .ciudad {
@@ -421,6 +434,11 @@ textarea {
 
     .btn-enviar {
         width: 30%;
+    }
+
+    .prev img {
+        width: 100%;
+        padding:0px 20px 20px 20px;
     }
 
   }
