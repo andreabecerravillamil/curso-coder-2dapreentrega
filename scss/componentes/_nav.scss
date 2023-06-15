@@ -46,6 +46,22 @@ nav {
                     color: $color-principal;
                     }
                 }
+
+                @include media(768px){
+                    &:active {
+                    border-style: none;
+                    padding: 0px;
+                    color: $color-principal;
+                    }
+                }
+
+                @include media(320px){
+                    &:active {
+                    border-style: none;
+                    padding: 0px;
+                    color: $color-principal;
+                    }
+                }
             }
         }
 

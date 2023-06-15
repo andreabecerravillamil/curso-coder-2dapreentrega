@@ -45,6 +45,20 @@ nav .menu-elementos li a:hover {
     color: #1720ce;
   }
 }
+@media screen and (max-width: 768px) {
+  nav .menu-elementos li a:active {
+    border-style: none;
+    padding: 0px;
+    color: #1720ce;
+  }
+}
+@media screen and (max-width: 320px) {
+  nav .menu-elementos li a:active {
+    border-style: none;
+    padding: 0px;
+    color: #1720ce;
+  }
+}
 @media screen and (max-width: 990px) {
   nav .menu-elementos {
     display: flex;
