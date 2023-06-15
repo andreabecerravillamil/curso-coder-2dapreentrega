@@ -1,0 +1,106 @@
+/* Pagina contacto */
+
+.elementos-contacto {
+    @include grid(2, 50%);
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    width: 70%;
+
+    .formulario {
+        padding: 50px 0;
+
+        .form {
+            display: block;
+            width: 90%;
+
+            @include media(768px) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        input {
+            height: 30px;
+            border-color: $color-principal;
+            border-radius: 5px;
+            font-family: $tipografia-principal;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+        
+        textarea {
+            border-color: $color-principal;
+            border-radius: 5px;
+            font-family: $tipografia-principal;
+            font-size: 14px;
+            border-width: 2px;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            padding-top: 15px;
+            height: 200px;
+            width: 90%;
+
+            @include media(768px){
+                width: 100%;
+            }
+        }
+        
+        .btn-enviar {
+            width: 20%;
+            height: 40px;
+            border: $color-principal;
+            border-style: dotted;
+            background-color: $color-terciario;
+            color: $color-secundario;
+        
+            &:hover {
+                background-color: $color-principal;
+                border-style: dotted;
+                border-color: $color-terciario;
+                color: $color-terciario;
+            }
+        
+            input[type="submit"], input[type="reset"] {
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+            }
+
+            @include media(768px){
+                width: 15%;
+            }
+            @include media(320px){
+                width: 30%;
+            }
+        }
+
+        @include media(768px){
+            padding-bottom: 20px;
+        }
+    }
+
+    .mapa {
+    
+        iframe {
+            width: 90%;
+
+            @include media(768px){
+                width: 100%;
+                @include flexible(flex, null, null, center, null);
+            }
+        }
+    }
+
+    @include media(768px) {
+        @include grid(1, auto);
+        margin: 0 auto;
+        padding-top: 0;
+        padding-bottom: 60px;
+        width: 90%;
+    }
+}

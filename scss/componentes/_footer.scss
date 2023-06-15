@@ -1,0 +1,58 @@
+footer {
+    @include flexible(flex, null, null, space-around, null);
+    bottom:0;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    background-color: $color-principal;
+
+    div {
+        a {
+            color: $color-terciario;
+            text-decoration: none;
+            align-items: center;
+
+            &:hover {
+                color: $color-terciario;
+            }
+        }
+    }
+
+    .datos {
+        @include flexible(flex, null, wrap, flex-start, null);
+        bottom:0;
+        background-color: $color-principal;
+        font-size: 24px;
+        padding: 30px 0;
+        line-height: normal;
+        color: $color-terciario;
+    }
+
+    .derecho {
+        @include media(768px){
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    
+    .sociales {
+        @include flexible(flex, column, null, center, center);
+
+        @include media(768px) {
+            padding-bottom: 20px;
+        }
+    }
+    
+    .ciudad {
+        @include flexible(flex, null, null, end, null);
+        text-align: right;
+
+        @include media(768px){
+            justify-content: center;
+        }
+    }
+
+    @include media(768px) {
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,39 @@
+/* Pagina nosotros */
+
+.elementos-nosotros {
+    width: 70%;
+    margin: 0 auto;
+    padding: 100px 0;
+    font-size: 16px;
+    @include grid(2, 50%);
+
+    h1 {
+        color: $color-principal;
+        font-size: 40px;
+    }
+
+    h6 {
+        font-weight: 800;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    @include media(768px) {
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px 0;
+        @include grid(1, auto);
+        font-size: 14px;
+
+        >.nos-1:nth-child(1) {
+            order: 1;
+        }
+
+        .nos-1 {
+            @include flexible(flex, null, null, center, null);
+        }
+        
+    }
+}

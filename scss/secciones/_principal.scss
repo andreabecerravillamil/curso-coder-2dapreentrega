@@ -1,0 +1,197 @@
+/* Pagina principal */
+
+* {
+    font-family: $tipografia-principal;
+}
+
+section {
+    .texto-banner {
+        @include flexible(flex, column, null, center, null);
+        padding-left: 100px;
+
+        @include media(768px){
+            padding-left: 15px;
+        }
+
+        @include media(375px){
+            margin-top: 35px;
+        }
+            
+        h1 {
+            color: $color-secundario;
+            font-weight: 800;
+            font-size: 3rem;
+            overflow: hidden;
+            border-right: .15em solid $color-principal;
+            white-space: nowrap;
+            margin-right: 200px;
+            animation: 
+            typing 2s steps(40, end),
+            blink-caret .75s step-end infinite;
+    
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 70% }
+            }
+              
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: $color-principal; }
+            }
+
+            @include media(1040px){
+                font-size: 2.5rem;
+                overflow: hidden;
+                border-right: .15em solid $color-principal;
+                white-space: nowrap;
+                margin-right: 65px;
+                animation: 
+                typing 2s steps(40, end),
+                blink-caret .85s step-end infinite;
+    
+                @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
+                }
+              
+                @keyframes blink-caret {
+                    from, to { border-color: transparent }
+                    90% { border-color: $color-principal; }
+                }
+            }
+
+            @include media(768px){
+                font-size: 2.3rem;
+                overflow: hidden;
+                border-right: .15em solid $color-principal;
+                white-space: nowrap;
+                margin-right: 40px;
+                animation: 
+                typing 2s steps(40, end),
+                blink-caret .85s step-end infinite;
+    
+                @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
+                }
+              
+                @keyframes blink-caret {
+                    from, to { border-color: transparent }
+                    90% { border-color: $color-principal; }
+                }
+            }
+
+            @include media(320px){
+                font-size: 1.9rem;
+                overflow: hidden;
+                border-right: .15em solid $color-principal;
+                white-space: nowrap;
+                margin-right: 5px;
+                animation: 
+                typing 2s steps(40, end),
+                blink-caret .85s step-end infinite;
+    
+                @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
+                }
+              
+                @keyframes blink-caret {
+                    from, to { border-color: transparent }
+                    90% { border-color: $color-principal; }
+                }
+            }
+        }
+
+        
+    }
+            
+    .banner-boton {
+        text-decoration: none;
+        border-style: dotted;
+        border-color: $color-principal;
+        padding: 10px;
+        color: $color-principal;
+        font-size: 14px;
+        text-align: center;
+        width: 10rem;
+            
+        &:hover {
+            background-color: $color-principal;
+            color: $color-terciario;
+            border-style: dotted;
+            border-color: $color-terciario;
+        }
+
+        @include media(320px) {
+            width: 7rem;
+            font-size: 12px;
+        }
+
+    }
+
+    .img-banner {
+            
+        img {
+            width: 90%;
+
+            @include media(768px){
+                width: 100%;
+            }
+        }
+    }
+
+    .titulo {
+        @include flexible(flex, null, null, null, center);
+        margin: 50px 0px;
+
+        .titulo-seccion {
+            padding: 0px;
+
+            h2{
+                font-weight: 800;
+            }
+        }
+        
+        hr {
+            border: dotted $color-principal;
+            opacity: inherit;
+            background-color: $color-terciario;
+
+            @include media(768px){
+                width: 100%;
+                align-items: center;
+            }
+        }
+
+        @include media(320px){
+            margin: 15px 0;
+
+        }
+
+    }
+
+    .notas {
+        @include flexible(flex, null, null, flex-start, null);
+    
+        div {
+            img {
+                width: 100%;
+            }
+        }
+
+        h6{
+            margin: 10px 0;
+            font-weight: 800;
+        }
+
+        .prev-index {
+            font-size: 16px;
+            height: auto;
+
+            a {
+                color: $color-secundario;
+            }
+        }
+    }
+}

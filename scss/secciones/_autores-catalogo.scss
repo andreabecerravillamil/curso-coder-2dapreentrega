@@ -1,0 +1,44 @@
+/* Pagina autores & catalogo */
+
+.prev {
+    text-align: center;
+    padding: 20px 0;
+
+    img {
+        width: 60%;
+        padding-bottom: 20px;
+
+        @include media(320px) {
+            width: 90%;
+            padding:0px 20px 20px 20px;
+        }
+    }
+
+    a {
+        font-size: 14px;
+        color: $color-principal;
+        margin: 0;
+    }
+
+}
+
+.prev-autor {
+    h5 {
+        font-size: 20px;
+        font-weight: 800;
+        margin: 10px 0;
+    }
+}
+
+.autores {
+    @include flexible(flex, null, null, space-around, null);
+    margin-bottom: 100px;
+
+    a {
+        color:$color-secundario;
+    }
+
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,23 @@
+@mixin flexible ($dis, $direccion, $corte, $just, $align)
+
+    {
+    display: $dis;
+    flex-flow: $direccion $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin grid ($columnas, $espacio)
+    
+    {
+        display: grid;
+        grid-template-columns: repeat($columnas, $espacio);
+
+}
+
+@mixin media ($medida:320px){
+    @media screen and (max-width:$medida) {
+        @content;
+    } 
+}
+

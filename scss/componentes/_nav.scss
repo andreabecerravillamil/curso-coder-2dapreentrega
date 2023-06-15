@@ -1,0 +1,56 @@
+nav {
+    margin-top: 30px;
+
+    .logo {
+
+        width: 70px;
+        height: 70px;
+    
+        &:hover {
+            border-style: dotted;
+            color: $color-principal;
+            padding: 10px;
+        }
+
+        @include media(768px) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    
+    
+    .menu-elementos {
+        @include flexible(flex, null, wrap, flex-end, center);
+        font-size: 1.5rem;
+        line-height: normal;
+    
+        li {
+            list-style: none;
+            margin-right: 20px;
+
+            a {
+                text-decoration: none;
+                color: $color-secundario;
+        
+                &:hover {
+                border-style: dotted;
+                border-color: $color-principal;
+                padding: 10px;
+                color: $color-principal;
+                }
+
+                @include media(990px){
+                    &:active {
+                    border-style: none;
+                    padding: 0px;
+                    color: $color-principal;
+                    }
+                }
+            }
+        }
+
+        @include media(990px) {
+            @include flexible (flex, column, null, null, flex-end);
+        }   
+    }
+}
