@@ -334,7 +334,7 @@ section .notas .prev-index a {
 
 .autores {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-bottom: 100px;
 }
 .autores a {

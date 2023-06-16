@@ -31,7 +31,7 @@
 }
 
 .autores {
-    @include flexible(flex, null, null, space-around, null);
+    @include flexible(flex, null, null, flex-start, null);
     margin-bottom: 100px;
 
     a {
