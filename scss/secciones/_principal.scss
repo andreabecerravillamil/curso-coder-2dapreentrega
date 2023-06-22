@@ -13,6 +13,10 @@ section {
             padding-left: 15px;
         }
 
+        @include media(425px){
+            margin-top: 35px;
+        }
+
         @include media(375px){
             margin-top: 35px;
         }
@@ -81,6 +85,27 @@ section {
                 }
             }
 
+            @include media(375px){
+                font-size: 2rem;
+                overflow: hidden;
+                border-right: .15em solid $color-principal;
+                white-space: nowrap;
+                margin-right: 25px;
+                animation: 
+                typing 2s steps(40, end),
+                blink-caret .85s step-end infinite;
+    
+                @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
+                }
+              
+                @keyframes blink-caret {
+                    from, to { border-color: transparent }
+                    90% { border-color: $color-principal; }
+                }
+            }
+
             @include media(320px){
                 font-size: 1.9rem;
                 overflow: hidden;
@@ -123,7 +148,7 @@ section {
             border-color: $color-terciario;
         }
 
-        @include media(320px) {
+        @include media(375px) {
             width: 7rem;
             font-size: 12px;
         }

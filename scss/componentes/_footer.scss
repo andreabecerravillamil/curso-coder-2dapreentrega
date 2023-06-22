@@ -38,7 +38,23 @@ footer {
     .sociales {
         @include flexible(flex, column, null, center, center);
 
+        .red {
+            @include flexible(flex, null, null, flex-start, center);
+            padding: 3px 0 3px 0;
+
+            img {
+                width: 21px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+            }
+
+            .facebook {
+                width: 14px;
+            }
+        }
+
         @include media(768px) {
+            @include flexible(flex, column, null, center, center);
             padding-bottom: 20px;
         }
     }
@@ -50,9 +66,5 @@ footer {
         @include media(768px){
             justify-content: center;
         }
-    }
-
-    @include media(768px) {
-        margin-top: 60px;
     }
 }

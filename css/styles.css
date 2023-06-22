@@ -83,6 +83,11 @@ section .texto-banner {
     padding-left: 15px;
   }
 }
+@media screen and (max-width: 425px) {
+  section .texto-banner {
+    margin-top: 35px;
+  }
+}
 @media screen and (max-width: 375px) {
   section .texto-banner {
     margin-top: 35px;
@@ -166,6 +171,32 @@ section .texto-banner h1 {
     }
   }
 }
+@media screen and (max-width: 375px) {
+  section .texto-banner h1 {
+    font-size: 2rem;
+    overflow: hidden;
+    border-right: 0.15em solid #1720ce;
+    white-space: nowrap;
+    margin-right: 25px;
+    animation: typing 2s steps(40, end), blink-caret 0.85s step-end infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    90% {
+      border-color: #1720ce;
+    }
+  }
+}
 @media screen and (max-width: 320px) {
   section .texto-banner h1 {
     font-size: 1.9rem;
@@ -208,7 +239,7 @@ section .banner-boton:hover {
   border-style: dotted;
   border-color: white;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   section .banner-boton {
     width: 7rem;
     font-size: 12px;
@@ -314,7 +345,13 @@ section .notas .prev-index a {
   width: 60%;
   padding-bottom: 20px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
+  .prev img {
+    width: 90%;
+    padding: 0px 20px 20px 20px;
+  }
+}
+@media screen and (max-width: 375px) {
   .prev img {
     width: 90%;
     padding: 0px 20px 20px 20px;
@@ -490,8 +527,26 @@ footer .sociales {
   justify-content: center;
   align-items: center;
 }
+footer .sociales .red {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px 0 3px 0;
+}
+footer .sociales .red img {
+  width: 21px;
+  margin-right: 5px;
+  margin-bottom: 4px;
+}
+footer .sociales .red .facebook {
+  width: 14px;
+}
 @media screen and (max-width: 768px) {
   footer .sociales {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 20px;
   }
 }
@@ -503,11 +558,6 @@ footer .ciudad {
 @media screen and (max-width: 768px) {
   footer .ciudad {
     justify-content: center;
-  }
-}
-@media screen and (max-width: 768px) {
-  footer {
-    margin-top: 60px;
   }
 }
 
